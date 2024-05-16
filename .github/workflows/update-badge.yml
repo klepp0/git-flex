@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Read value from file
         id: read-value
@@ -24,7 +24,6 @@ jobs:
           sed -i "s/git_lifts-[^)]*/git_lifts-${VALUE}-blue/" README.md
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${ACTIONS_PAT}@github.com/${{ github.repository }}.git
           git add README.md
           git commit -m "docs(ci): update git lift badge value to ${VALUE}"
-          git push origin HEAD:main
+          git push
