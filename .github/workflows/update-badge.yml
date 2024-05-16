@@ -32,7 +32,7 @@ jobs:
 
       - name: Push changes
         env:
-          PAT_TOKEN: ${{ secrets.ACTION_PAT }}
+          PAT_TOKEN: ${{ secrets.ACTIONS_PAT }}
         run: |
           git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}
           git push
