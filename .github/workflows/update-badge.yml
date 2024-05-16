@@ -11,16 +11,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history for all branches and tags
 
       - name: Read value from file
         id: read-value
         run: |
           VALUE=$(cat gym/lifts.txt)
-          echo "::set-output name=value::$VALUE"
+          echo "value=$VALUE" >> $GITHUB_ENV
 
       - name: Update README.md with the new badge value
         run: |
-          VALUE=${{ steps.read-value.outputs.value }}
+          VALUE=${{ env.value }}
           sed -i "s/git_lifts-[^)]*/git_lifts-${VALUE}-blue/" README.md
 
       - name: Commit changes
@@ -29,6 +31,10 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add README.md
           git commit -m "docs(ci): update git lift badge value to ${VALUE}"
+
+      - name: Pull latest changes
+        run: |
+          git pull origin main --rebase
 
       - name: Push changes
         env:
