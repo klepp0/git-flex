@@ -32,7 +32,7 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add README.md
-          git commit -m "docs(ci): update git lift badge value to ${VALUE}"
+          git commit -m "docs(ci): update git lift badge value 🏅"
 
       - name: Pull latest changes
         run: |
