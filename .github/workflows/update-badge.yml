@@ -1,0 +1,29 @@
+name: Update Badge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Read value from file
+        id: read-value
+        run: |
+          VALUE=$(cat gym/lifts.txt)
+          echo "::set-output name=value::$VALUE"
+
+      - name: Update README.md with the new badge value
+        run: |
+          VALUE=${{ steps.read-value.outputs.value }}
+          sed -i "s/git_lifts-[^)]*/git_lifts-${VALUE}-blue/" README.md
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m "docs(ci): update git lift badge value to ${VALUE}"
+          git push
