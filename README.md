@@ -3,7 +3,7 @@
 ![Git Lifts](https://img.shields.io/badge/git_lifts-22-blue)
 ![contribution forest](https://yceffort.kr/_next/image?url=%2F2022%2F01%2Fimages%2Fgit-contribution-graph.png&w=3840&q=75)
 
-Do you dream of having a contribution graph as epic as a dense forest? 🌲🌲 Then `git-workout` is here to pump up your contributions! This repo includes a workout program that automates your contributions to flex those green squares on your GitHub profile. 💚💪
+Do you dream of having a contribution graph as epic as a dense forest? 🌲🌲 Then `git-flex` is here to pump up your contributions! This repo includes a workout program that automates your contributions to flex those green squares on your GitHub profile. 💚💪
 
 ## What’s the Deal? 🤔
 
@@ -28,8 +28,8 @@ to see all the available commands and get started.
 Ready to start your Git fitness journey? Here’s how:
 
 ```shell
-git clone git@github.com:klepp0/git-workout.git
-cd git-workout
+git clone git@github.com:klepp0/git-flex.git
+cd git-flex
 make setup
 ```
 
