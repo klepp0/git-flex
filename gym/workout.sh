@@ -21,6 +21,7 @@ read -r NUM_LIFTS < "$LIFTS_PATH"
 echo "Current number of repetitions: $NUM_LIFTS"
 
 cd "$REPO_DIR"
+git pull origin main
 git add gym/lifts.txt
 git commit -m "refactor: $PHRASE"
 git push origin main
