@@ -22,8 +22,17 @@ jobs:
         run: |
           VALUE=${{ steps.read-value.outputs.value }}
           sed -i "s/git_lifts-[^)]*/git_lifts-${VALUE}-blue/" README.md
+
+      - name: Commit changes
+        run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add README.md
           git commit -m "docs(ci): update git lift badge value to ${VALUE}"
+
+      - name: Push changes
+        env:
+          PAT_TOKEN: ${{ secrets.ACTION_PAT }}
+        run: |
+          git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}
           git push
