@@ -1,6 +1,6 @@
 # 💪 Workout Your Git! 🏋️‍♂️
 
-![Git Lifts](https://img.shields.io/badge/git_lifts-20-blue)
+![Git Lifts](https://img.shields.io/badge/git_lifts-21-blue)
 ![contribution forest](https://yceffort.kr/_next/image?url=%2F2022%2F01%2Fimages%2Fgit-contribution-graph.png&w=3840&q=75)
 
 Do you dream of having a contribution graph as epic as a dense forest? 🌲🌲 Then `git-workout` is here to pump up your contributions! This repo includes a workout program that automates your contributions to flex those green squares on your GitHub profile. 💚💪
