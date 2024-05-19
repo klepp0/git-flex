@@ -1,6 +1,6 @@
 # 💪 Workout Your Git! 🏋️‍♂️
 
-![Git Lifts](https://img.shields.io/badge/Git_Lifts_💪-39-blue) | ![Update Badge](https://github.com/klepp0/git-flex/actions/workflows/update-badge.yml/badge.svg)
+![Git Lifts](https://img.shields.io/badge/Git_Lifts_💪-40-blue) | ![Update Badge](https://github.com/klepp0/git-flex/actions/workflows/update-badge.yml/badge.svg)
 
 ![contribution forest](https://yceffort.kr/_next/image?url=%2F2022%2F01%2Fimages%2Fgit-contribution-graph.png&w=3840&q=75)
 
