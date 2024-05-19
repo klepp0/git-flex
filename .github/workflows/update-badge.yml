@@ -25,7 +25,7 @@ jobs:
       - name: Update README.md with the new badge value
         run: |
           VALUE=${{ env.value }}
-          sed -i "s/Git_Lifts_💪-[^)]*/git_lifts-${VALUE}-blue/" README.md
+          sed -i "s/Git_Lifts_💪-[^)]*/Git_Lifts_💪-${VALUE}-blue/" README.md
 
       - name: Commit changes
         run: |
